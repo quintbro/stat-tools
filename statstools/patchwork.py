@@ -3,7 +3,8 @@ from pathlib import Path
 import io
 import regex as re
 from plotnine import ggplot
-import pkg_resources
+from importlib import resources
+
 
 class PGrid:
     def __init__(self, plot_dict):
@@ -190,10 +191,10 @@ class PGrid:
         title_img = Image.new('RGB', (self.no_title.width, size + 20), color="white")
         draw = ImageDraw.Draw(title_img)
         if font == "basic":
-            path = pkg_resources.resource_filename("statstools", "assets/Helvetica.ttf")
+            path = resources.files("statstools").joinpath("assets/Helvetica.ttf")
             font = ImageFont.truetype(path, size)
         elif font == "fancy":
-            path = pkg_resources.resource_filename("statstools", "assets/OregonLdoLight-nRd4.ttf")
+            path = resources.files("statstools").joinpath("assets/OregonLdoLight-nRd4.ttf")
             font = ImageFont.truetype(path, size)
         else:
             font = self._load_font(font, size)
