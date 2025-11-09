@@ -3,7 +3,7 @@ This is a repository with code that assists with doing statistical analysis in P
 
 # Installation
 ```
-pip install git+https://github.com/quintbro/stat_tools.git
+pip install git+https://github.com/quintbro/stat-tools.git
 ```
 
 ## car.py
