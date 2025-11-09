@@ -15,7 +15,6 @@ dependencies = [
     "statsmodels",
     "pandas",
     "pathlib",
-    "io",
     "regex",
     "plotnine",
     "importlib",
