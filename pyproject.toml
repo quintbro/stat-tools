@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setupdtools.build_meta"
+
+[project]
+name = "statstools"
+authors = [
+    {name = "Riley Wilkinson", email = "j.riley.wilkinson@gmail.com"},
+]
+description = 'A package to aid in statistical analysis with statsmodels'
+readme = "README.md"
+requires-python = ">=3.7"
+version = "0.0.2"
+dependencies = [
+    "statsmodels",
+    "pandas",
+    "PIL",
+    "pathlib",
+    "io",
+    "regex",
+    "plotnine",
+    "importlib",
+    "numpy",
+    "seaborn",
+    "math",
+    "matplotlib",
+    "scipy",
+    "patsy"
+]
+
+[project.urls]
+Homepage = "https://github.com/quintbro/stat-tools"
+Repository = "https://github.com/quintbro/stat-tools"
+
+[tool.setuptools]
+packages = { find = {} }
+
+[tool.setuptools.package-data]
+statstools = ["data/*.csv", "assets/*"]
